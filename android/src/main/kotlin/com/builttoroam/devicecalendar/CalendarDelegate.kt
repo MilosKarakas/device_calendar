@@ -744,7 +744,7 @@ class CalendarDelegate : PluginRegistry.RequestPermissionsResultListener {
                 recurrenceRule.daysOfWeek = rfcRecurrenceRule.byDayPart?.mapNotNull {
                     DayOfWeek.values().find { dayOfWeek -> dayOfWeek.ordinal == it.weekday.ordinal }
                 }?.toMutableList()
-            }
+            } else -> {}
         }
 
         val rfcRecurrenceRuleString = rfcRecurrenceRule.toString()
